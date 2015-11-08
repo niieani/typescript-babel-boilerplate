@@ -5,6 +5,26 @@
 // ${fileDirname}: the current opened file's dirname
 // ${fileExtname}: the current opened file's extension
 // ${cwd}: the current working directory of the spawned process
+
+{
+	"version": "0.1.0",
+	"command": "gulp",
+	"isShellCommand": true,
+	"tasks": [
+		{
+			"taskName": "build",
+			// Make this the default build command.
+			"isBuildCommand": true,
+			// Show the output window only if unrecognized errors occur.
+			"showOutput": "silent",
+			// Use the standard less compilation problem matcher.
+			"problemMatcher": [
+				"$gulp-tsc"
+			]
+		}
+	]
+}
+
 /*
 // A task runner that calls the Typescript compiler (tsc) and
 // Compiles a HelloWorld.ts program
@@ -28,22 +48,6 @@
 	"problemMatcher": "$tsc"
 }
 */
-{
-	"version": "0.1.0",
-	"command": "gulp",
-	"isShellCommand": true,
-	"tasks": [
-		{
-			"taskName": "build",
-			// Make this the default build command.
-			"isBuildCommand": true,
-			// Show the output window only if unrecognized errors occur.
-			"showOutput": "silent",
-			// Use the standard less compilation problem matcher.
-			"problemMatcher": "$tsc"
-		}
-	]
-}
 
 // A task runner that calls the Typescript compiler (tsc) and
 // compiles based on a tsconfig.json file that is present in
