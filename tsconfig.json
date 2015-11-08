@@ -4,6 +4,7 @@
     "experimentalAsyncFunctions": true,
     "experimentalDecorators": true,
     "jsx": "react",
-    "module": "system"
+    "module": "system",
+    "emitDecoratorMetadata": true
   }
 }
