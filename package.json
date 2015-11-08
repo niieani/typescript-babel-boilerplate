@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Boilerplate for TS -> ES6 -> ES5 and SASS -> CSS compilation with JSPM for modern web development",
   "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
