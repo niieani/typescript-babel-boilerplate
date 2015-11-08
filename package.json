@@ -2,9 +2,9 @@
   "name": "typescript-babel-sass-jspm-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate for TS -> ES6 -> ES5 and SASS -> CSS compilation with JSPM for modern web development",
-  "main": "index.js",
   "main": "dist/index.js",
   "scripts": {
+    "start": "gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
@@ -12,13 +12,12 @@
     "comments": false,
     "compact": false,
     "presets": [
-      "es2015",
-      "stage-0"
+      "es2015"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/niieani/typescript-babel-sass-jspm-boilerplate.git"
+    "url": "git+ssh://git@github.com/niieani/typescript-babel-boilerplate.git"
   },
   "keywords": [
     "typescript",
@@ -31,15 +30,14 @@
   "author": "Bazyli Brzóska <npm@invent.life>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/niieani/typescript-babel-sass-jspm-boilerplate/issues"
+    "url": "https://github.com/niieani/typescript-babel-boilerplate/issues"
   },
-  "homepage": "https://github.com/niieani/typescript-babel-sass-jspm-boilerplate#readme",
+  "homepage": "https://github.com/niieani/typescript-babel-boilerplate#readme",
   "devDependencies": {
     "aurelia-bundler": ">=0.1.8",
     "aurelia-tools": "^0.1.14",
     "babel-eslint": "^4.1.4",
     "babel-preset-es2015": "^6.1.2",
-    "babel-preset-stage-0": "^6.1.2",
     "browser-sync": "^2.9.12",
     "conventional-changelog": "^0.5.1",
     "del": "^2.0.2",
