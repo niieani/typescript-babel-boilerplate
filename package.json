@@ -1,15 +1,23 @@
 {
-  "name": "typescript-babel-sass-jspm-boilerplate",
+  "name": "typescript-babel-node-boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for TS -> ES6 -> ES5 and SASS -> CSS compilation with JSPM for modern web development",
-  "main": "index.js",
+  "description": "Boilerplate for TS -> ES6 -> ES5 for modern node development",
+  "main": "dist/index.js",
   "scripts": {
+    "prepublish": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
     "moduleIds": false,
     "comments": false,
     "compact": false,
+    "plugins": [
+      "babel-plugin-transform-es2015-destructuring",
+      "babel-plugin-transform-es2015-modules-commonjs",
+      "babel-plugin-transform-es2015-parameters",
+      "babel-plugin-transform-es2015-sticky-regex",
+      "babel-plugin-transform-es2015-unicode-regex"
+    ],
     "presets": [
       "es2015",
       "stage-0"
@@ -34,39 +42,28 @@
   },
   "homepage": "https://github.com/niieani/typescript-babel-sass-jspm-boilerplate#readme",
   "devDependencies": {
-    "aurelia-bundler": ">=0.1.8",
-    "aurelia-tools": "^0.1.14",
-    "babel-eslint": "^4.1.4",
-    "babel-preset-es2015": "^6.1.2",
-    "babel-preset-stage-0": "^6.1.2",
-    "browser-sync": "^2.9.12",
+    "babel-plugin-transform-es2015-destructuring": ">=6.1.2",
+    "babel-plugin-transform-es2015-modules-commonjs": ">=6.1.2",
+    "babel-plugin-transform-es2015-parameters": ">=6.1.2",
+    "babel-plugin-transform-es2015-sticky-regex": ">=6.1.2",
+    "babel-plugin-transform-es2015-unicode-regex": ">=6.1.2",
     "conventional-changelog": "^0.5.1",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.0",
     "gulp-bump": "^1.0.0",
     "gulp-changed": "^1.3.0",
-    "gulp-eslint": "^1.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-protractor": "^1.0.0",
-    "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-tslint": "^3.5.0",
     "gulp-typescript": "^2.9.2",
     "gulp-yuidoc": "^0.1.2",
-    "jspm": "^0.16.14",
     "object.assign": "^4.0.3",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.4",
     "vinyl-paths": "^2.0.0",
     "yargs": "^3.29.0"
-  },
-  "jspm": {
-    "dependencies": {
-      "core-js": "npm:core-js@^1.2.5",
-      "regenerator": "npm:regenerator@^0.8.42"
-    },
-    "devDependencies": {}
   }
 }
