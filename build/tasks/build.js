@@ -8,20 +8,30 @@ var paths = require('../paths');
 var assign = Object.assign || require('object.assign');
 var notify = require('gulp-notify');
 var sass = require('gulp-sass');
-var ts = require('gulp-typescript');  
+var ts = require('gulp-typescript');
 
-var tsProject = ts.createProject('tsconfig.json');
 
 // transpiles changed es6 files to SystemJS format
 // the plumber() call prevents 'pipe breaking' caused
 // by errors from other gulp plugins
 // https://www.npmjs.com/package/gulp-plumber
 gulp.task('build-system', function () {
+  var tsProject = ts.createProject('tsconfig.json');
   return gulp.src(paths.source)
     .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
-    .pipe(changed(paths.output, {extension: '.ts'}))
+    .pipe(changed(paths.output))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(ts(tsProject))
+    .pipe(to5())
+    .pipe(sourcemaps.write({includeContent: true}))
+    .pipe(gulp.dest(paths.output));
+});
+
+gulp.task('build-system-es6', function () {
+  return gulp.src(paths.sourceES6)
+    .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
+    .pipe(changed(paths.output))
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(to5())
     .pipe(sourcemaps.write({includeContent: true}))
     .pipe(gulp.dest(paths.output));
@@ -52,6 +62,14 @@ gulp.task('build', function(callback) {
   return runSequence(
     'clean',
     ['build-system', 'build-html', 'build-css'],
+    callback
+  );
+});
+
+gulp.task('build-es6', function(callback) {
+  return runSequence(
+    'clean',
+    ['build-system-es6', 'build-html', 'build-css'],
     callback
   );
 });

@@ -7,13 +7,25 @@ var config = {
   bundles: {
     "dist/app-build": {
       includes: [
-        '*',
-        // '*.html!text',
-        // '*.css!text'
+        '[*]',
+        '*.html!text',
+        '*.css!text',
       ],
       options: {
         inject: true,
         minify: true
+      }
+    },
+    "dist/requirements": {
+      includes: [
+      ],
+      options: {
+        inject: true,
+        minify: true
+        /*
+         * Add bundle file revision/version.
+         * rev: true
+        */
       }
     }
   }

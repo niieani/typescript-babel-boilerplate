@@ -4,7 +4,14 @@
     "experimentalAsyncFunctions": true,
     "experimentalDecorators": true,
     "jsx": "react",
-    "module": "system",
-    "emitDecoratorMetadata": true
-  }
+    "emitDecoratorMetadata": true,
+    "listFiles": true,
+    "outDir": "dist-es6",
+    "removeComments": false
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "jspm_packages"
+  ]
 }

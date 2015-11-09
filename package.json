@@ -9,7 +9,7 @@
   },
   "babel": {
     "moduleIds": false,
-    "comments": false,
+    "comments": true,
     "compact": false,
     "presets": [
       "es2015"
