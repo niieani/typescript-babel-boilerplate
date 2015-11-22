@@ -17,7 +17,7 @@ var tsProject = ts.createProject('tsconfig.json');
 // https://www.npmjs.com/package/gulp-plumber
 gulp.task('build-system', function () {
   return gulp.src(paths.source)
-    .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
+    //.pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
     .pipe(changed(paths.output, {extension: '.ts'}))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(ts(tsProject))

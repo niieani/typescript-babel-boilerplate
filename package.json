@@ -12,21 +12,13 @@
     "moduleIds": false,
     "comments": false,
     "compact": false,
-    "plugins": [
-      "babel-plugin-transform-es2015-destructuring",
-      "babel-plugin-transform-es2015-modules-commonjs",
-      "babel-plugin-transform-es2015-parameters",
-      "babel-plugin-transform-es2015-sticky-regex",
-      "babel-plugin-transform-es2015-unicode-regex"
-    ],
     "presets": [
-      "es2015",
-      "stage-0"
+      "es2015-node5"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/niieani/typescript-babel-sass-jspm-boilerplate.git"
+    "url": "git+ssh://git@github.com/niieani/typescript-babel-boilerplate.git"
   },
   "keywords": [
     "typescript",
@@ -39,17 +31,13 @@
   "author": "Bazyli Brzóska <npm@invent.life>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/niieani/typescript-babel-sass-jspm-boilerplate/issues"
+    "url": "https://github.com/niieani/typescript-babel-boilerplate/issues"
   },
-  "homepage": "https://github.com/niieani/typescript-babel-sass-jspm-boilerplate#readme",
+  "homepage": "https://github.com/niieani/typescript-babel-boilerplate#readme",
   "devDependencies": {
-    "babel-plugin-transform-es2015-destructuring": "^6.0.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.0.0",
-    "babel-plugin-transform-es2015-parameters": "^6.0.0",
-    "babel-plugin-transform-es2015-sticky-regex": "^6.0.0",
-    "babel-plugin-transform-es2015-unicode-regex": "^6.0.0",
+    "babel-preset-es2015-node5": "^1.1.0",
     "conventional-changelog": "^0.5.1",
-    "del": "^2.0.2",
+    "del": "^2.1.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.0",
     "gulp-bump": "^1.0.0",
@@ -58,16 +46,16 @@
     "gulp-plumber": "^1.0.1",
     "gulp-protractor": "^1.0.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-tslint": "^3.5.0",
+    "gulp-tslint": "^3.6.0",
     "gulp-typescript": "^2.9.2",
     "gulp-yuidoc": "^0.1.2",
     "object.assign": "^4.0.3",
     "require-dir": "^0.3.0",
-    "run-sequence": "^1.1.4",
-    "vinyl-paths": "^2.0.0",
-    "yargs": "^3.29.0"
+    "run-sequence": "^1.1.5",
+    "vinyl-paths": "^2.1.0",
+    "yargs": "^3.30.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.0.16"
+    "babel-polyfill": "^6.2.0"
   }
 }

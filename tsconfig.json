@@ -1,10 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "es6",
+    "module": "commonjs",
     "experimentalAsyncFunctions": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "jsx": "react",
-    "module": "system",
-    "emitDecoratorMetadata": true
-  }
+    "module": "system"
+  },
+  "exclude": [
+    "dist",
+    "dist-es6",
+    "build",
+    "node_modules"
+  ]
 }
